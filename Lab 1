@@ -27,7 +27,7 @@ function debounce(fn, delay) {
 
     console.log("Original array:", numbers);
 
-    const filteredNumbers = await asyncFilter(numbers, asyncFilterCallback, true); 
+    const filteredNumbers = await asyncFilter(numbers, asyncFilterCallback)
 
     console.log("Filtered array (even numbers):", filteredNumbers);
 
