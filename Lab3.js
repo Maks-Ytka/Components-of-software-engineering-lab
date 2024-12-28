@@ -56,7 +56,9 @@ async function fetchAllDataAsync(ids, controller) {
 })();
 
 async function fetchAllDataParallel(ids, controller) {
-  if (ids.length === 0) {
+  if (!ids || ids.length === 0) {
+  throw new Error("Масив ID порожній або не визначений");
+}
     console.error("Масив ID порожній");
   }
   const promises = ids.map((id) => fetchData(id, controller.signal));
