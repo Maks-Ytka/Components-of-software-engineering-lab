@@ -71,7 +71,9 @@ async function fetchAllDataParallel(ids, controller) {
     const results = await fetchAllDataParallel(ids, controllerParallel);
     console.log("Результати паралельного виконання:", results);
 
-    controllerParallel.abort();
+    setTimeout(() => {
+  controllerParallel.abort();
+}, 500);
   } catch (error) {
     console.error("Помилка у паралельному виконанні:", error.message);
   }
