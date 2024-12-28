@@ -47,8 +47,12 @@ async function fetchAllDataParallel(ids) {
   
   (async () => {
     try {
-      const results = await fetchAllDataParallel(ids);
-      console.log("Parallel execution results:", results);
+      if (ids && ids.length > 0) {
+        const results = await fetchAllDataParallel(ids);
+        console.log("Parallel execution results:", results);
+      } else {
+        console.error("Error: IDs array is invalid");
+      }
     } catch (error) {
       console.error("Error in parallel execution:", error);
     }
