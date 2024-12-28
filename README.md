@@ -36,7 +36,7 @@ async/await:
 Функція fetchAllDataParallel cхожа на fetchAllDataPromise, але включає перевірку вхідних даних на порожній масив. Чому так? Це зручно для виявлення помилок у даних до початку виконання.
 
 У всіх функціях AbortController дозволяє скасовувати запити. Це оптимізує ресурси і звільняє програму від зайвої роботи.
-# [Lab 3](https://github.com/Maks-Ytka/Components-of-software-engineering-lab/blob/main/Lab4.js)
+# [Lab 4](https://github.com/Maks-Ytka/Components-of-software-engineering-lab/blob/main/Lab4.js)
 Я реалізував задачу підрахунку слів у великому текстовому файлі за допомогою модулів fs і readline.
 
 Чому fs і readline? fs.createReadStream дозволяє читати файл частинами, що знижує використання пам'яті. readline.createInterface забезпечує пострічне читання, дозволяючи обробляти кожен рядок файлу окремо.
