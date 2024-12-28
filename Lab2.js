@@ -22,11 +22,11 @@ function fetchData(id) {
   async function fetchAllDataAsync(ids) {
     const results = [];
     for (const id of ids) {
-      const data = fetchData(id);
-      results.push(data);
-    }
-    return results;
+      const data = await fetchData(id);
+    results.push(data);
   }
+  return results;
+}
 
   (async () => {
     try {
