@@ -13,7 +13,7 @@ function fetchData(id, signal) {
 
 function fetchAllDataPromise(ids, controller) {
   const promises = ids.map((id) => fetchData(id, controller.signal));
-  return Promise.all(promises).then((results) => results.map((r) => r));
+  return Promise.all(promises);
 }
 
 const ids = [1, 2, 3];
