@@ -17,7 +17,7 @@ async function processLargeFile(filePath) {
             wordCount += words.length;
         }
 
-        console.log(`Word total: ${totalWords}`);
+        console.log(`Word total: ${wordCount}`);
 
     } catch (error) {
         console.error('Error processing file:', file);
