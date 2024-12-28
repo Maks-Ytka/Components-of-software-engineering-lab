@@ -38,6 +38,8 @@ async function fetchAllDataAsync(ids, controller) {
       const data = await fetchData(id, controller.signal);
       results.push(data);
     } catch (error) {
+      console.error(`Помилка під час завантаження даних для ID: ${id}`, error);
+    }
     }
   }
   return results;
