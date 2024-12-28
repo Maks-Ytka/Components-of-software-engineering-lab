@@ -29,7 +29,7 @@ fetchAllDataPromise(ids, controller)
 
 setTimeout(() => {
   controller.abort();
-}, 5000);
+}, 500);
 
 async function fetchAllDataAsync(ids, controller) {
   const results = [];
