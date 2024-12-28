@@ -75,3 +75,4 @@ async function fetchAllDataParallel(ids, controller) {
     console.error("Помилка у паралельному виконанні:", error.message);
   }
 })();
+
