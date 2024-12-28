@@ -40,7 +40,6 @@ async function fetchAllDataAsync(ids, controller) {
     } catch (error) {
       console.error(`Помилка під час завантаження даних для ID: ${id}`, error);
     }
-    }
   }
   return results;
 }
@@ -57,9 +56,7 @@ async function fetchAllDataAsync(ids, controller) {
 
 async function fetchAllDataParallel(ids, controller) {
   if (!ids || ids.length === 0) {
-  throw new Error("Масив ID порожній або не визначений");
-}
-    console.error("Масив ID порожній");
+    throw new Error("Масив ID порожній або не визначений");
   }
   const promises = ids.map((id) => fetchData(id, controller.signal));
   return Promise.all(promises);
@@ -72,10 +69,9 @@ async function fetchAllDataParallel(ids, controller) {
     console.log("Результати паралельного виконання:", results);
 
     setTimeout(() => {
-  controllerParallel.abort();
-}, 500);
+      controllerParallel.abort();
+    }, 500);
   } catch (error) {
     console.error("Помилка у паралельному виконанні:", error.message);
   }
 })();
-
