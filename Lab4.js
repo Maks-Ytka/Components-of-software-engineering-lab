@@ -12,10 +12,10 @@ async function processLargeFile(filePath) {
             crlfDelay: Infinity 
         });
 
-        for await (const line of rl)
-            const words = line.trim().split(/\s+/);
-            wordCount += words.length;
-        }
+        for await (const line of rl) {
+    const words = line.trim().split(/\s+/);
+    wordCount += words.length;
+}
 
         console.log(`Word total: ${wordCount}`);
 
