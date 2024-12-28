@@ -7,8 +7,8 @@ function fetchData(id) {
 }
 
   function fetchAllDataPromise(ids) {
-    return Promise.all(ids.map((id) => fetchData(id))).catch(() => {});
-  }
+    return Promise.all(ids.map((id) => fetchData(id)));
+}
 
   const ids = [1, 2, 3];
   fetchAllDataPromise(ids)
