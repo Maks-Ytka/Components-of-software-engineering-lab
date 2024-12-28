@@ -24,3 +24,4 @@ async/await:
 
 Паралельне виконання:
 Функція fetchAllDataParallel дозволяє паралельно виконувати запити, що економить час у випадках, коли порядок не важливий.
+# [Lab 3](https://github.com/Maks-Ytka/Components-of-software-engineering-lab/blob/main/Lab3.js)
