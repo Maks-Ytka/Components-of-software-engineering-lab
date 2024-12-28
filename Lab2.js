@@ -37,7 +37,10 @@ function fetchData(id) {
     }
   })();
   
-  async function fetchAllDataParallel(ids) {
+async function fetchAllDataParallel(ids) {
+    if (!ids || ids.length === 0) {
+      throw new Error("IDs array is empty or undefined");
+    }
     const promises = ids.map((id) => fetchData(id));
     return Promise.all(promises);
   }
