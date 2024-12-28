@@ -1,10 +1,10 @@
 function fetchData(id) {
     return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(`Data for ID: ${id}`);
-      }, 10); 
-    });
-  }
+    setTimeout(() => {
+      resolve(`Data for ID: ${id}`);
+    }, 1000); 
+  });
+}
 
   function fetchAllDataPromise(ids) {
     return Promise.all(ids.map((id) => fetchData(id))).catch(() => {});
