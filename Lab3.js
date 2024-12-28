@@ -4,7 +4,7 @@ function fetchData(id, signal) {
       resolve(`Дані для ID: ${id}`);
     }, 1000);
 
-    singal.addEventListener("abort", () => {
+    signal.addEventListener("abort", () => {
       clearTimeout(timeout);
       reject(new Error(`Завантаження перервано для ID: ${id}`));
     });
