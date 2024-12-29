@@ -10,3 +10,13 @@ async function asyncFilter(array, callback) {
     ));
     return array.filter((_, index) => results[index]);
 }
+function debounce(fn, delay) {
+    let timeout;
+    if (typeof fn !== 'function') {
+        throw new TypeError('Expected a function');
+    }
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
