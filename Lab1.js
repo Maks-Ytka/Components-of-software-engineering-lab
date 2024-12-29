@@ -20,3 +20,15 @@ function debounce(fn, delay) {
         timeout = setTimeout(() => fn.apply(this, args), delay);
     };
 }
+(async () => {
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    console.log("Original array:", numbers);
+
+    const filteredNumbers = await asyncFilter(numbers, asyncFilterCallback);
+
+    console.log("Filtered array (even numbers):", filteredNumbers);
+
+    const debouncedLog = debounce(() => console.log("This message is debounced."), 1000);
+    debouncedLog();
+})();
